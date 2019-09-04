@@ -317,6 +317,7 @@ def get_table_list(select=None, filters=None, catalog_url=None, proxies=None):
     try:
         s = Session()
         p = Request('GET', url, params=params).prepare()
+        print(f'get_table_list: {p}')
 
         logging.info("Download " + p.url)
 
